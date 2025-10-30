@@ -1,0 +1,32 @@
+#ifndef ITEM_H_
+#define ITEM_H_
+#include <bits/stdc++.h>
+using namespace std;
+class Item {
+public:
+	Item();
+	Item(string n, string d, int i){name = n; description = d; id = i;}
+	virtual ~Item();
+
+	void setName(string n){name = n;}
+	void setDescription(int d){description = d;}
+	void setId(int i){id = i;}
+
+	string getName(){return name;}
+	string getDescription(){return description;}
+	int    getId(){return id;}
+
+	friend ostream operator <<(ostream& out, Item item)
+	{
+		out << setw(12) << "Name: "        << item.name        << endl
+		  	<< setw(12) << "Description: " << item.description << endl
+			  << setw(12) << "Id: "          << item.id          << endl;
+		return out;
+	}
+private:
+	string name;
+	string description;
+	int    id;
+};
+
+#endif

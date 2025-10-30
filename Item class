@@ -16,7 +16,7 @@ public:
 	string getDescription(){return description;}
 	int    getId(){return id;}
 
-	friend ostream operator <<(ostream& out, Item item)
+	friend ostream& operator <<(ostream& out, Item item)
 	{
 		out << setw(12) << "Name: "        << item.name        << endl
 		  	<< setw(12) << "Description: " << item.description << endl

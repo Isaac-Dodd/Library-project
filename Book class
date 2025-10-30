@@ -19,7 +19,7 @@ public:
 	string getAuthor(){return author;}
 	int    getCRDate(){return crDate;}
 
-	friend ostream operator <<(ostream& out, Book book)
+	friend ostream& operator <<(ostream& out, Book book)
 	{
 		out << book.item
 			<< setw(12) << "Title: "  << book.title  << endl

@@ -17,7 +17,7 @@ public:
 	int    getDirector(){return director;}
 	vector<string> getCast(){return cast;}
 	
-	friend ostream operator <<(ostream& out, Movie movie)
+	friend ostream& operator <<(ostream& out, Movie movie)
 	{
 		out << movie.item
 			<< setw(12) << "Title: "    << movie.title    << endl

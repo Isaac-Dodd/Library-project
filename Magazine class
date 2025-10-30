@@ -16,7 +16,7 @@ public:
 	string getTitle(){return title;}
 	int    getEdition(){return edition;}
 
-	friend ostream operator <<(ostream& out, Magazine magazine)
+	friend ostream& operator <<(ostream& out, Magazine magazine)
 	{
 		out << magazine.item
 			<< setw(12) << "Title: "   << magazine.title   << endl

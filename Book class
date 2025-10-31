@@ -6,7 +6,7 @@ class Book : public Item
 {
 public:
 	Book();
-	Book(string n, string d, int i, string t, string a, int cr): item(n, d, i)
+	Book(string n, string d, int i, string t, string a, int cr): Item(n, d, i)
 	{title = t; author = a; crDate = cr;}
 
 	virtual ~Book();
@@ -15,11 +15,11 @@ public:
 	void setAuthor(string a){author = a;}
 	void setCRDate(int d){crDate = d;}
 
-	string getTitle(){return title;}
-	string getAuthor(){return author;}
-	int    getCRDate(){return crDate;}
+	string getTitle()const{return title;}
+	string getAuthor()const{return author;}
+	int    getCRDate()const{return crDate;}
 
-	friend ostream& operator <<(ostream& out, Book book)
+	friend ostream& operator <<(ostream& out,const Book& book)
 	{
 		out << book.item
 			<< setw(12) << "Title: "  << book.title  << endl
@@ -32,7 +32,6 @@ private:
 	string title;
 	string author;
 	int    crDate;
-	Item   item;
 };
 
 #endif

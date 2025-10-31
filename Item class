@@ -12,11 +12,11 @@ public:
 	void setDescription(int d){description = d;}
 	void setId(int i){id = i;}
 
-	string getName(){return name;}
-	string getDescription(){return description;}
-	int    getId(){return id;}
+	string getName()const{return name;}
+	string getDescription()const{return description;}
+	int    getId()const{return id;}
 
-	friend ostream& operator <<(ostream& out, Item item)
+	friend ostream& operator <<(ostream& out, const Item& item)
 	{
 		out << setw(12) << "Name: "        << item.name        << endl
 		  	<< setw(12) << "Description: " << item.description << endl

@@ -6,17 +6,17 @@ class Magazine : public Item
 {
 public:
 	Magazine();
-	Magazine(string n, string d, int i, string t, int e): item(n, d, i)
+	Magazine(string n, string d, int i, string t, int e): Item(n, d, i)
 	{title = t; edition = e;}
 	virtual ~Magazine();
 
 	void setTitle(string t){title = t;}
 	void setEdition(int e){edition = e;}
 
-	string getTitle(){return title;}
-	int    getEdition(){return edition;}
+	string getTitle()const{return title;}
+	int    getEdition()const{return edition;}
 
-	friend ostream& operator <<(ostream& out, Magazine magazine)
+	friend ostream& operator <<(ostream& out,const Magazine& magazine)
 	{
 		out << magazine.item
 			<< setw(12) << "Title: "   << magazine.title   << endl
@@ -28,7 +28,6 @@ public:
 private:
 	string title;
 	int    edition;
-	Item   item;
 };
 
 #endif

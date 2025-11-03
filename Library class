@@ -1,0 +1,43 @@
+#ifndef LIBRARY_H_
+#define LIBRARY_H_
+#include "Item.h"
+
+class Library {
+public:
+	Library(){shelves.resize(5, vector<Item>(15)); checkedOut.resize(5, vector<Item>(15));}
+	virtual ~Library();
+	void addItem(int row, int col)
+	{
+		// prompt item type/description/id -> prompt for book/movie/magazine
+	}
+
+  void checkOutItem()
+  {
+    // copy item to checkedOut
+    // store name, due date
+  }
+  void checkInItem()
+  {
+    // remove from checkedOut
+  }
+  friend ostream& operator << (ostream& out, const Library& library)
+  {
+
+  }
+  void printCheckedOut()const
+  {
+    // print all in checkedOut
+  }
+
+  void swapItems(int row1, int col1, int row2, int col2) const
+  {
+
+  }
+
+
+private:
+	vector<vector<Item>> shelves;
+  vector<vector<Item>> checkedOut;
+};
+
+#endif

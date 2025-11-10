@@ -24,6 +24,8 @@ class LibraryStorage{
         void addItem(int rowNum, Item* item);
     //Swaps any two items within the storage given their locations
         void swapItems(int row1, int column1, int row2, int column2);
+        void checkInItem();
+        void checkOutItem();
 
 };
 

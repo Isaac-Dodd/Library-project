@@ -14,8 +14,8 @@ class LibraryStorage{
     //Inner vector = columns
         vector<vector<Item*>> storage;
 
-    // store the pointer, person name, due date, and orginal position
-        vector<vector<Item*>> checkedOut;
+    // key = id of item    item pointer, pair of og position and name/due date
+        unordered_map<int, pair<Item*,pair<pair<int,int>, pair<string,string>>>> checkedOut;
 
     public:
     //Constructor that initializes given # of rows and columns

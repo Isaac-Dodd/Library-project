@@ -13,6 +13,10 @@ class LibraryStorage{
     //Outer vector = rows
     //Inner vector = columns
         vector<vector<Item*>> storage;
+
+    // store the pointer, person name, due date, and orginal position
+        vector<vector<Item*>> checkedOut;
+
     public:
     //Constructor that initializes given # of rows and columns
         LibraryStorage(int rows);

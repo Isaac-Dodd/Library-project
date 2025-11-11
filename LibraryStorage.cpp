@@ -2,8 +2,8 @@
 
 
 LibraryStorage::LibraryStorage(int rows){
-    //vector<int>(columns) creates a shelf with "column" # of compartments
-    storage.resize(rows);
+    //fill each shelf with nullptrs
+    shelves.resize(5, vector<Item*>(15));
 }
 
 vector<Item*>& LibraryStorage::operator[](int row){

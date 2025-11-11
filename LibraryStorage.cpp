@@ -11,10 +11,6 @@ vector<Item*>& LibraryStorage::operator[](int row){
     return storage[row];
 }
 
-void LibraryStorage::printStorage() const{
-
-}
-
 void LibraryStorage::addItem(int rowNum, Item* item){
     
 }

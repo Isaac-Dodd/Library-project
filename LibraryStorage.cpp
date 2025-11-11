@@ -30,11 +30,11 @@ friend ostream& operator << (ostream& out, const LibraryStorage& library){
     
 }
 
-void LibraryStorage::checkOutItem(Item* item)
+void checkOutItem(Item* item, int rowNum, int colNum, string name, string dueDate)
 {
-    checkedOut.push_back();
+    checkedOut[item->getId()] = {item,{{rowNum, colNum}, {name, dueDate}}};
 }
-void LibraryStorage::checkOutItem()
+void LibraryStorage::checkInItem(Item* item)
 {
 
 }

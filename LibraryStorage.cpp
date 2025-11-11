@@ -11,8 +11,8 @@ vector<Item*>& LibraryStorage::operator[](int row){
     return storage[row];
 }
 
-void LibraryStorage::addItem(int rowNum, int colNum, Item* item){ // pass in item not pointer?
-    
+void LibraryStorage::addItem(int rowNum, int colNum, Item item){ 
+    storage[rowNum][colNum] = new Item[item];
 }
 
 void LibraryStorage::swapItems(int row1, int column1, int row2, int column2){

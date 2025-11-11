@@ -25,3 +25,7 @@ void LibraryStorage::swapItems(int row1, int column1, int row2, int column2){
     storage[row1][column1] = storage[row2][column2];
     storage[row2][column2] = temp;
 }
+
+friend ostream& operator << (ostream& out, const LibraryStorage& library){
+    
+}

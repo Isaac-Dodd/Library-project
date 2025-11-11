@@ -21,7 +21,7 @@ class LibraryStorage{
         vector<Item*>& operator[](int index);
         friend ostream& operator << (ostream& out, const LibraryStorage& library);
     //Adds an item, presumably in an empty shelf, using throw/catch exceptions for overflow/outofrange errors
-        void addItem(int rowNum, int colNum, Item* item);
+        void addItem(int rowNum, int colNum, Item item);
     //Swaps any two items within the storage given their locations
         void swapItems(int row1, int column1, int row2, int column2);
         void checkInItem(Item* item);

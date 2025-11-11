@@ -19,7 +19,7 @@ class LibraryStorage{
     //Overloaded [] operator that allows access to a certain shelf
     //returns by reference in order to modify the elements of storage directly
         vector<Item*>& operator[](int index);
-        void printStorage() const;
+        friend ostream& operator << (ostream& out, const LibraryStorage& library);
     //Adds an item, presumably in an empty shelf, using throw/catch exceptions for overflow/outofrange errors
         void addItem(int rowNum, Item* item);
     //Swaps any two items within the storage given their locations

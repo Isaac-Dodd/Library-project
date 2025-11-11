@@ -29,3 +29,12 @@ void LibraryStorage::swapItems(int row1, int column1, int row2, int column2){
 friend ostream& operator << (ostream& out, const LibraryStorage& library){
     
 }
+
+void LibraryStorage::checkOutItem(Item* item)
+{
+    checkedOut.push_back({*item, name, dueDate, rowNum, colNum});
+}
+void LibraryStorage::checkOutItem()
+{
+
+}

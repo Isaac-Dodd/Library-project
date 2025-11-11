@@ -3,7 +3,7 @@
 
 LibraryStorage::LibraryStorage(int rows){
     //fill each shelf with nullptrs
-    shelves.resize(5, vector<Item*>(15));
+    storage.resize(5, vector<Item*>(15));
 }
 
 vector<Item*>& LibraryStorage::operator[](int row){

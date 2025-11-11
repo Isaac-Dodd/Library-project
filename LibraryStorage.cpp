@@ -32,7 +32,7 @@ friend ostream& operator << (ostream& out, const LibraryStorage& library){
 
 void LibraryStorage::checkOutItem(Item* item)
 {
-    checkedOut.push_back({*item, name, dueDate, rowNum, colNum});
+    checkedOut.push_back();
 }
 void LibraryStorage::checkOutItem()
 {

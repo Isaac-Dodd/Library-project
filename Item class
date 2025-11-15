@@ -2,7 +2,12 @@
 #define ITEM_H_
 #include <bits/stdc++.h>
 using namespace std;
-class Item {
+class Item 
+{
+private:
+	string name;
+	string description;
+	int    id;
 public:
 	Item();
 	Item(string n, string d, int i){name = n; description = d; id = i;}
@@ -18,15 +23,9 @@ public:
 
 	friend ostream& operator <<(ostream& out, const Item& item)
 	{
-		out << setw(12) << "Name: "        << item.name        << endl
-		  	<< setw(12) << "Description: " << item.description << endl
-			  << setw(12) << "Id: "          << item.id          << endl;
+		//make more generic
 		return out;
 	}
-private:
-	string name;
-	string description;
-	int    id;
 };
 
 #endif

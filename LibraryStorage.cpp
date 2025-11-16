@@ -15,15 +15,17 @@ void LibraryStorage::addItem(int rowNum, int colNum, Item item){
     storage[rowNum][colNum] = new Item[item];
 }
 
-void LibraryStorage::swapItems(int row1, int column1, int row2, int column2){
+void LibraryStorage::swapItems(Item* item1, Item* item2){
+    // get positions of each item
+    vector<int> position1 = item1.getIndex();
+    vector<int> position2 = item2.getIndex();
     
-    if (storage[row1][column1] == nullptr || storage[row2][column2] == nullptr){
-        
-    }
     //Classic swap using temp variable
-    Item* temp = storage[row1][column1];
-    storage[row1][column1] = storage[row2][column2];
-    storage[row2][column2] = temp;
+    Item* temp = storage[position1[0]][position1[1]];
+    storage[position1[0]][position1[1]] = storage[position2[0]][position2[1]];
+    storage[position2[0]][position2[1]] = temp;
+
+    delete temp;
 }
 
 friend ostream& operator << (ostream& out, const LibraryStorage& library){

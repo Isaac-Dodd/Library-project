@@ -66,4 +66,5 @@ vector<int> LibraryStorage::getIndex(Item* item)
             }
         }
     }
+    return {};
 }

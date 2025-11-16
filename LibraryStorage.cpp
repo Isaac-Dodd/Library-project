@@ -32,6 +32,7 @@ friend ostream& operator << (ostream& out, const LibraryStorage& library){
 
 void checkOutItem(Item* item, string name, string dueDate)
 {
+    int rowNum, colNum;
     // find index to store in checkedOut map
     for(int i = 0; i < storage.size(); ++i)
     {
@@ -39,8 +40,8 @@ void checkOutItem(Item* item, string name, string dueDate)
         {
             if(item == &storage[i][j])
             {
-                int rowNum = i;
-                int colNum = j;
+                rowNum = i;
+                colNum = j;
                 break;
             }
         }
@@ -49,12 +50,11 @@ void checkOutItem(Item* item, string name, string dueDate)
     // store item in checkedOut map
     checkedOut[item->getId()] = {item,{{rowNum, colNum}, {name, dueDate}}};
 
-    // delete original item?
 }
 void LibraryStorage::checkInItem(Item* item)
 {
     // create easier to use variable for id
-    int id = [item->getId()];
+    int id = item->getId();
 
     // put item pointer back into original position
     storage[checkedOut[id].second.first.first][checkedOut[id].second.first.second] = item;

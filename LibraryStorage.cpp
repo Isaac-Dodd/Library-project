@@ -65,7 +65,7 @@ vector<int> LibraryStorage::getIndex(Item* item)
     return {};
 }
 
-ostream& operator <<(ostream& out, const Item& item)
+friend ostream& operator <<(ostream& out, const Item& item)
 {
 	out << setw(width) << "Name: " << item.name << endl
 		<< setw(width) << "Description: " << item.description << endl

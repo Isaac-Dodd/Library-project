@@ -50,6 +50,9 @@ void checkOutItem(Item* item, string name, string dueDate)
     // store item in checkedOut map
     checkedOut[item->getId()] = {item,{{rowNum, colNum}, {name, dueDate}}};
 
+    // remove item in storage?
+    storage[rowNum][colNum] = nullptr;
+
 }
 void LibraryStorage::checkInItem(Item* item)
 {

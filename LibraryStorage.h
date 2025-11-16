@@ -27,9 +27,10 @@ class LibraryStorage{
     //Adds an item, presumably in an empty shelf, using throw/catch exceptions for overflow/outofrange errors
         void addItem(int rowNum, int colNum, Item item);
     //Swaps any two items within the storage given their locations
-        void swapItems(int row1, int column1, int row2, int column2);
+        void swapItems(Item* item1, Item* item2);
         void checkInItem(Item* item, string user, string dueDate);
         void checkOutItem(Item* item);
+        vector<int> getIndex(Item* item);
 
 };
 

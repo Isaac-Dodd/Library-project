@@ -53,5 +53,12 @@ void checkOutItem(Item* item, string name, string dueDate)
 }
 void LibraryStorage::checkInItem(Item* item)
 {
+    // create easier to use variable for id
+    int id = [item->getId()];
 
+    // put item pointer back into original position
+    storage[checkedOut[id].second.first.first][checkedOut[id].second.first.second] = item;
+
+    // delete item from checkedOut
+    checkedOut[id].erase();
 }

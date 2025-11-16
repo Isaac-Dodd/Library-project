@@ -7,27 +7,14 @@ class Magazine : public Item
 {
 public:
 	Magazine();
-	/*Magazine(string n, string d, int i, string t, int e) : Item(n, d, i)
-	{
-		title = t; edition = e;
-	}
-	virtual ~Magazine();*/
-
-	/*void setTitle(string t) { title = t; }
-	void setEdition(int e) { edition = e; }
-
-	string getTitle()const { return title; }
-	int    getEdition()const { return edition; }\*/
+	Magazine(string n, string d, int i, string t, int e);
+	virtual ~Magazine();
+	
+	void setTitle(string t);
+	void setEdition(int e);
+	string getTitle()const;
+	int    getEdition()const;
 	void getItemSpecifics(/*ostream& os*/) const;
-
-	//friend ostream& operator <<(ostream& out, const Magazine& magazine)
-	//{
-	//	out << magazine.item
-	//		<< setw(12) << "Title: " << magazine.title << endl
-	//		<< setw(12) << "Edition: " << magazine.edition << endl;
-
-	//	return out;
-	//}
 
 private:
 	string title;
@@ -35,3 +22,4 @@ private:
 };
 
 #endif
+

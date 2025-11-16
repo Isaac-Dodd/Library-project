@@ -28,10 +28,6 @@ void LibraryStorage::swapItems(Item* item1, Item* item2){
     delete temp;
 }
 
-friend ostream& operator << (ostream& out, const LibraryStorage& library){
-    
-}
-
 void checkOutItem(Item* item, string name, string dueDate)
 {
     // find index to store in checkedOut map
@@ -67,4 +63,13 @@ vector<int> LibraryStorage::getIndex(Item* item)
         }
     }
     return {};
+}
+
+ostream& operator <<(ostream& out, const Item& item)
+{
+	out << setw(width) << "Name: " << item.name << endl
+		<< setw(width) << "Description: " << item.description << endl
+		<< setw(width) << "Id: " << item.id << endl;
+	item.getItemSpecifics(/*out*/);
+	return out;
 }

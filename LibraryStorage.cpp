@@ -60,5 +60,5 @@ void LibraryStorage::checkInItem(Item* item)
     storage[checkedOut[id].second.first.first][checkedOut[id].second.first.second] = item;
 
     // delete item from checkedOut
-    checkedOut[id].erase();
+    checkedOut.erase(id);
 }

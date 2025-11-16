@@ -51,9 +51,5 @@ Item::~Item()
 
 ostream& operator <<(ostream& out, const Item& item)
 {
-	out << setw(width) << "Name: " << item.name << endl
-		<< setw(width) << "Description: " << item.description << endl
-		<< setw(width) << "Id: " << item.id << endl;
-	item.getItemSpecifics(/*out*/);
-	return out;
+// Figure out what outputting the object is gonna do over an item
 }

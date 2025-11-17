@@ -10,19 +10,19 @@ Magazine::Magazine(string n, string d, int i, string t, int e) : Item(n, d, i)
 	edition = e;
 	author = a;
 }
-void setTitle(string t)
+void Magazine::setTitle(string t)
 {
 	title = t;
 }
-void setEdition(int e)
+void Magazine::setEdition(int e)
 {
 	edition = e;
 }
-string getTitle()const
+string Magazine::getTitle()const
 {
 	return(title);
 }
-int    getEdition()const
+int    Magazine::getEdition()const
 {
 	return(edition);
 }
@@ -31,3 +31,4 @@ void Magazine::getItemSpecifics() const
 	cout << setw(12) << "Title: " << title << endl
 		 << setw(12) << "Edition: " << edition << endl;
 }
+

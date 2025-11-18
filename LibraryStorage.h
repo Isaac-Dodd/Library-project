@@ -4,6 +4,9 @@
 #include <iostream>
 #include <vector>
 #include "Item.h"
+#include "Magazine.h"
+#include "Book.h"
+#include "Movie.h"
 using namespace std;
 
 

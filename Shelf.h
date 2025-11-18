@@ -2,21 +2,16 @@
 #ifndef "SHELF_H"
 #define "SHELF_H"
 
-#include "Item.h"
-#include "Magazine.h"
-#include "Book.h"
-#include "Movie.h"
+#include "Compartment.h"
   
 class Shelf
 {
 public:
   Shelf()
   Shelf(int, item*);
-  Item* & operator[](int index); // set up compartment data type
+  Compartment & operator[](int index); // set up compartment data type
 private:
-  vector<item*>
+  Compartment  
 };
 
 #endif
-
-

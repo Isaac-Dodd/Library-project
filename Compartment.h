@@ -15,6 +15,8 @@ Compartment(item*);
 
 friend ostream& operator <<(ostream& out, const Item& item);
 
+Compartment& operator[](int index);
+
 private:
 
 };

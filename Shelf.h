@@ -11,6 +11,7 @@ class Shelf
 {
 public:
   Shelf()
+  Shelf(int, item*);
   Item* & operator[](int index); // set up compartment data type
 private:
   vector<item*>

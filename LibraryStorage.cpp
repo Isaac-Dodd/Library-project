@@ -24,8 +24,6 @@ void LibraryStorage::swapItems(Item* item1, Item* item2){
     Item* temp = storage[position1[0]][position1[1]];
     storage[position1[0]][position1[1]] = storage[position2[0]][position2[1]];
     storage[position2[0]][position2[1]] = temp;
-
-    delete temp;
 }
 
 vector<int> LibraryStorage::getIndex(Item* item)

@@ -65,7 +65,18 @@ void LibraryStorage::checkInItem(Item* item, string user, string dueDate)
 }
 
 
-ostream& operator <<(ostream& out, const LibraryStorage& library)
-{
-	return out;
+ostream& operator<<(ostream& out, const LibraryStorage& library) {
+    for (int i = 0; i < library.storage.size(); ++i) {
+        out << "Row " << i << ": ";
+        for (int j = 0; j < library.storage[i].size(); ++j) {
+            if (library.storage[i][j]) {
+                out << library.storage[i][j]->getName() << " | ";
+            } else {
+                out << "[empty] | ";
+            }
+        }
+        out << "\n";
+    }
+    return out;
 }
+

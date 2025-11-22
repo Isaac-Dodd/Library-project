@@ -8,7 +8,10 @@ Magazine::Magazine() : Item()
 Magazine::Magazine(string n, string d, int i, string t, int e) : Item(n, d, i)
 {
 	edition = e;
-	author = a;
+	title = t;
+}
+Magazine::~Magazine() {
+    cout << "destroying magazine";
 }
 void Magazine::setTitle(string t)
 {
@@ -22,7 +25,7 @@ string Magazine::getTitle()const
 {
 	return(title);
 }
-int    Magazine::getEdition()const
+int Magazine::getEdition()const
 {
 	return(edition);
 }
@@ -31,4 +34,3 @@ void Magazine::getItemSpecifics() const
 	cout << setw(12) << "Title: " << title << endl
 		 << setw(12) << "Edition: " << edition << endl;
 }
-

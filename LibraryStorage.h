@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <bits/stdc++.h>
 #include "Item.h"
 #include "Magazine.h"
 #include "Book.h"
@@ -28,11 +29,11 @@ class LibraryStorage{
         vector<Item*>& operator[](int index);
         friend ostream& operator << (ostream& out, const LibraryStorage& library);
     //Adds an item, presumably in an empty shelf, using throw/catch exceptions for overflow/outofrange errors
-        void addItem(int rowNum, int colNum, Item item);
+        void addItem(int rowNum, int colNum, Item* item);
     //Swaps any two items within the storage given their locations
         void swapItems(Item* item1, Item* item2);
         void checkInItem(Item* item, string user, string dueDate);
-        void checkOutItem(Item* item);
+        void checkOutItem(Item* item, string user, string dueDate);
         vector<int> getIndex(Item* item);
 
 };

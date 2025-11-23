@@ -1,0 +1,18 @@
+#pragma once
+
+#include "Shelf.h"
+
+class LibraryStorage
+{
+    public:
+        LibraryStorage(int);
+        void addItem(int, Item*);
+        void printItemsInStorage() const;
+        Shelf& operator[](int rows);
+        void swapItems(int row1, int column1, int row2, int column2);
+        ~LibraryStorage();
+        
+    private:
+        vector<Shelf> bookCase;
+        vector<int> checkedOutBooks;
+};

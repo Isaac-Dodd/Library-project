@@ -1,17 +1,19 @@
 #pragma once
-#ifndef "SHELF_H"
-#define "SHELF_H"
-
 #include "Compartment.h"
-  
+
+const int SHELF_SIZE = 15;
+
 class Shelf
 {
 public:
-  Shelf()
-  Shelf(int, item*);
-  Compartment & operator[](int index); // set up compartment data type
+	Shelf();
+	//Shelf(Item*);
+
+	vector<Compartment> shelf;
+
+	Compartment& operator[](int index);
+
 private:
-  Compartment  
+	vector<Compartment> currentShelf;
 };
 
-#endif

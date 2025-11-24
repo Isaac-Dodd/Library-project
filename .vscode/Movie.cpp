@@ -47,12 +47,15 @@ vector<string> Movie::getCast()
 
 void Movie::getItemSpecifics() const
 {
-	cout << title << endl
-		<< director << endl;
+	cout << left << setw(WIDTH) << "Title: " << title << endl
+		 << setw(WIDTH) << "Director: " <<director << endl
+		 << "Main Actors: ";
+
 	for (int i = 0; i < cast.size(); ++i)
 	{
-		cout << cast[i] << endl;
+		cout << cast[i] << " ";
 	}
+	cout << endl;
 }
 
 Movie::~Movie()

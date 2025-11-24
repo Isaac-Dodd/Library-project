@@ -21,7 +21,7 @@ Book::~Book()
 
 void Book::setTitle(string t)
 {
-	title = t; 
+	title = t;
 }
 
 void Book::setAuthor(string a)
@@ -51,7 +51,7 @@ string Book::getCRDate() const
 
 void Book::getItemSpecifics() const
 {
-	cout << setw(12) << "Title: " << title << endl
-		 << setw(12) << "Author: " << author << endl
-		 << setw(12) << "Copyright Date: " << crDate << endl;
+	cout << left << setw(WIDTH) << "Title: " << title << endl
+		<< setw(WIDTH) << "Author: " << author << endl
+		<< setw(WIDTH) << "Copyright Date: " << crDate << endl;
 }

@@ -9,7 +9,7 @@ public:
 	Magazine();
 	Magazine(string n, string d, int i, string t, int e);
 	virtual ~Magazine();
-	
+
 	void setTitle(string t);
 	void setEdition(int e);
 	string getTitle()const;
@@ -22,4 +22,3 @@ private:
 };
 
 #endif
-

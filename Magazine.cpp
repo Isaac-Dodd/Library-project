@@ -11,7 +11,7 @@ Magazine::Magazine(string n, string d, int i, string t, int e) : Item(n, d, i)
 	title = t;
 }
 Magazine::~Magazine() {
-    cout << "destroying magazine";
+	cout << "destroying magazine";
 }
 void Magazine::setTitle(string t)
 {
@@ -31,6 +31,6 @@ int Magazine::getEdition()const
 }
 void Magazine::getItemSpecifics() const
 {
-	cout << setw(12) << "Title: " << title << endl
-		 << setw(12) << "Edition: " << edition << endl;
+	cout << left << setw(WIDTH) << "Title: " << title << endl
+		 << setw(WIDTH) << "Edition: " << edition << endl;
 }

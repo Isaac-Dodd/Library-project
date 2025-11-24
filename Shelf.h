@@ -13,7 +13,13 @@ public:
 
 	Compartment& operator[](int index);
 
-private:
-	vector<Compartment> currentShelf;
-};
+	const Compartment& operator[](int index) const;
+	//friend ostream& operator <<(ostream&, const Shelf);
 
+	static int getShelfCount();
+
+
+private:
+	vector<Compartment> currentShelf = vector<Compartment>(15);
+	static int shelfCount;
+};

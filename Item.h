@@ -5,8 +5,8 @@
 #include <iomanip>
 
 using namespace std;
-const int width = 20;
-class Item{
+const int WIDTH = 12;
+class Item {
 public:
 	Item();
 	Item(string n, string d, int i);
@@ -30,9 +30,4 @@ protected:
 };
 
 
-
 #endif
-
-
-//create a baseclass pointer map
-//create a subclass object and store it in the map

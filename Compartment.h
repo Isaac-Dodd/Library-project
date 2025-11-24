@@ -12,11 +12,11 @@ public:
 	Compartment(Item*);
 	void setCurrentItem(Item*);
 	Item* getCurrentItem();
+	
 
-	friend ostream& operator <<(ostream& out, const Item& item);
+	friend ostream& operator <<(ostream&, Compartment);
 
 
 private:
 	Item* currentItem;
 };
-

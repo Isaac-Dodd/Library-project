@@ -19,8 +19,8 @@ Item* Compartment::getCurrentItem()
 	return(currentItem);
 }
 
-ostream& operator <<(ostream& out, const Item *item)
+ostream& operator <<(ostream& out, Compartment item)
 {
-	out << *item;
+	out << *item.getCurrentItem();
 	return(out);
 }

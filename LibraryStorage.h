@@ -1,41 +1,34 @@
-#ifndef LIBRARYSTORAGE_H
-#define LIBRARYSTORAGE_H
+#pragma once
 
-#include <iostream>
-#include <vector>
-#include <bits/stdc++.h>
-#include "Item.h"
-#include "Magazine.h"
-#include "Book.h"
-#include "Movie.h"
-using namespace std;
+#include "Shelf.h"
+#include <unordered_map>
+#include <algorithm>
+
+class LibraryStorage
+{
+public:
+    LibraryStorage(int);
+    void addItem(int rowNum, int colNum, Item* item);
+    void printItemsInStorage();
+    void printCheckedOut();
+    int occupiedSituation(int row, int col);
+
+    void addShelf();
+
+    vector<int> getIndex(Compartment compartment);
+    void checkInItem(int id, string currentDate);
+    void checkOutItem(Compartment compartment, string user, string dueDate);
+
+    
+    Shelf& operator[](int rows);
+    Shelf operator[](int rows) const;
+
+    void swapItems(int row1, int column1, int row2, int column2);
 
 
-class LibraryStorage{
-    private:
-    //2D vector that stores the shelf and compartments
-    //Outer vector = rows
-    //Inner vector = columns
-        vector<vector<Item*>> storage;
-
+private:
+    vector<Shelf> storage;
+    
     // key = id of item    item pointer, pair of og position and name/due date
-        unordered_map<int, pair<Item*,pair<pair<int,int>, pair<string,string>>>> checkedOut;
-
-    public:
-    //Constructor that initializes given # of rows and columns
-        LibraryStorage(int rows);
-    //Overloaded [] operator that allows access to a certain shelf
-    //returns by reference in order to modify the elements of storage directly
-        vector<Item*>& operator[](int index);
-        friend ostream& operator << (ostream& out, const LibraryStorage& library);
-    //Adds an item, presumably in an empty shelf, using throw/catch exceptions for overflow/outofrange errors
-        void addItem(int rowNum, int colNum, Item* item);
-    //Swaps any two items within the storage given their locations
-        void swapItems(Item* item1, Item* item2);
-        void checkInItem(Item* item, string user, string dueDate);
-        void checkOutItem(Item* item, string user, string dueDate);
-        vector<int> getIndex(Item* item);
-
+    unordered_map<int, pair<Item*,pair<pair<int,int>, pair<string,string>>>> checkedOut;
 };
-
-#endif

@@ -9,19 +9,19 @@ Item::Item()
 
 Item::Item(string n, string d, int i)
 {
-	name = n; 
-	description = d; 
-	id = i; 
+	name = n;
+	description = d;
+	id = i;
 }
 
-void Item::setName(string n) 
-{ 
-	name = n; 
+void Item::setName(string n)
+{
+	name = n;
 }
 
-void Item::setDescription(string d) 
-{ 
-	description = d; 
+void Item::setDescription(string d)
+{
+	description = d;
 }
 
 void Item::setId(int i)
@@ -51,10 +51,9 @@ Item::~Item()
 
 ostream& operator <<(ostream& out, const Item& item)
 {
-	out << setw(width) << "Name: " << item.name << endl
-		<< setw(width) << "Description: " << item.description << endl
-		<< setw(width) << "Id: " << item.id << endl;
+	out << left << setw(WIDTH) << "Name: " << item.name << endl
+		<< setw(WIDTH) << "Description: " << item.description << endl
+		<< setw(WIDTH) << "Id: " << item.id << endl;
 	item.getItemSpecifics(/*out*/);
 	return out;
 }
-

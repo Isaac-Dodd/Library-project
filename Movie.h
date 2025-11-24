@@ -20,21 +20,6 @@ public:
 	vector<string> getCast();
 	void getItemSpecifics() const;
 
-	//friend ostream& operator <<(ostream& out, Movie& movie)
-	//{
-	//	out << movie.item
-	//		<< setw(12) << "Title: " << movie.title << endl
-	//		<< setw(12) << "Director: " << movie.director << endl
-	//		<< setw(12) << "Main Actors: ";
-	//	for (auto& i : movie.cast)
-	//	{
-	//		out << i << ", ";
-	//	}
-	//	out << endl;
-
-	//	return out;
-	//}
-
 private:
 	string title;
 	string director;

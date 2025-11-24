@@ -17,7 +17,7 @@ public:
 
 	string getTitle()const;
 	string getAuthor()const;
-	string    getCRDate()const;
+	string getCRDate()const;
 	void getItemSpecifics() const;
 
 	//Shouldn't need this if we define getItemSpecifics and use that to output 
@@ -29,17 +29,5 @@ private:
 	string author;
 	string crDate;
 };
-
-//ostream& operator <<(ostream& out, const Book& book)
-//{
-//	out << setw(12) << "Name: " << book.name << endl
-//		<< setw(12) << "Description: " << book.description << endl
-//		<< setw(12) << "Id: " << book.id << endl
-//		<< setw(12) << "Title: " << book.title << endl
-//		<< setw(12) << "Author: " << book.author << endl
-//		<< setw(12) << "Copyright Date: " << book.crDate << endl;
-//
-//	return out;
-//}
 
 #endif
